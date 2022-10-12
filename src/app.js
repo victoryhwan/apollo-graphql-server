@@ -1,5 +1,6 @@
 import express from "express";
 import { ApolloServer } from "apollo-server-express";
+import { ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core';
 import { bodyParserGraphQL } from "body-parser-graphql";
 import compression from "compression";
 import resolvers from "../src/graphql/resolvers";
@@ -21,7 +22,12 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   // introspection: true, // 스키마 검사 활성화 default: true
-  // playground: true, // playgorund 활성화 default: true
+  playground: true, // playgorund 활성화 default: true
+  plugins: [
+    ApolloServerPluginLandingPageGraphQLPlayground({
+        // options
+    })
+]
 });
 
 server.start().then(res => {

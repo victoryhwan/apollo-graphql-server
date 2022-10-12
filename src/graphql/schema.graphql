@@ -2,6 +2,7 @@ type Users {
   userNo: Int
   name: String
   email: String
+  profile: String
 }
 
 type Query {
