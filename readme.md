@@ -8,11 +8,9 @@ npm start
 
 ```
 
-### graphQL explorer 실행
+### graphQL playground 실행 
 ```
 1. http://localhost:8000/graphql
-2. https://studio.apollographql.com/sandbox/explorer
-3. explorer
 ```
 ### operation (graphQL 쿼리 실행)
 ```
